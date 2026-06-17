@@ -1,0 +1,57 @@
+{
+  "name": "MembershipApplication",
+  "type": "object",
+  "properties": {
+    "full_name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "affiliation": {
+      "type": "string",
+      "description": "University or organization"
+    },
+    "position": {
+      "type": "string",
+      "description": "Academic title/position"
+    },
+    "membership_type": {
+      "type": "string",
+      "enum": [
+        "regular",
+        "student",
+        "retired",
+        "affiliate"
+      ],
+      "default": "regular"
+    },
+    "research_interests": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "approved",
+        "rejected"
+      ],
+      "default": "pending"
+    },
+    "colleges": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Selected special interest groups"
+    }
+  },
+  "required": [
+    "full_name",
+    "email",
+    "membership_type"
+  ]
+}
