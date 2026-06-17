@@ -1,0 +1,74 @@
+{
+  "name": "Officer",
+  "type": "object",
+  "properties": {
+    "full_name": {
+      "type": "string",
+      "description": "Full name of the officer"
+    },
+    "title": {
+      "type": "string",
+      "description": "Position/title in the society"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "president",
+        "vice_president",
+        "board_member",
+        "regional_vp",
+        "secretary",
+        "executive",
+        "coordinator",
+        "past_president",
+        "founder"
+      ],
+      "description": "Category of the officer"
+    },
+    "affiliation": {
+      "type": "string",
+      "description": "University or organization"
+    },
+    "term": {
+      "type": "string",
+      "description": "Term period, e.g. 2025-2027"
+    },
+    "email": {
+      "type": "string",
+      "description": "Contact email"
+    },
+    "photo_url": {
+      "type": "string",
+      "description": "URL to profile photo"
+    },
+    "bio": {
+      "type": "string",
+      "description": "Full biography"
+    },
+    "research_interests": {
+      "type": "string",
+      "description": "Research interests"
+    },
+    "publications_summary": {
+      "type": "string",
+      "description": "Key publications"
+    },
+    "website_url": {
+      "type": "string",
+      "description": "Personal or institutional website"
+    },
+    "sort_order": {
+      "type": "number",
+      "description": "Display order"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "full_name",
+    "title",
+    "category"
+  ]
+}
