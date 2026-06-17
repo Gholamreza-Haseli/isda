@@ -1,0 +1,26 @@
+{
+  "name": "JournalDepartment",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Department name"
+    },
+    "editor_name": {
+      "type": "string"
+    },
+    "editor_affiliation": {
+      "type": "string"
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name",
+    "editor_name"
+  ]
+}
