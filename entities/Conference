@@ -1,0 +1,53 @@
+{
+  "name": "Conference",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Conference title"
+    },
+    "location": {
+      "type": "string",
+      "description": "City and country"
+    },
+    "start_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "end_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "description": {
+      "type": "string",
+      "description": "Conference description"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Conference venue or city image"
+    },
+    "external_url": {
+      "type": "string",
+      "description": "External conference website"
+    },
+    "conference_type": {
+      "type": "string",
+      "enum": [
+        "annual",
+        "international",
+        "workshop",
+        "chapter"
+      ],
+      "default": "annual"
+    },
+    "is_upcoming": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "title",
+    "location",
+    "start_date"
+  ]
+}
