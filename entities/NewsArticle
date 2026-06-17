@@ -1,0 +1,46 @@
+{
+  "name": "NewsArticle",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "string",
+      "description": "Short summary"
+    },
+    "body": {
+      "type": "string",
+      "description": "Full article content in HTML"
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "announcement",
+        "research",
+        "event",
+        "award",
+        "newsletter"
+      ],
+      "default": "announcement"
+    },
+    "is_published": {
+      "type": "boolean",
+      "default": true
+    },
+    "publish_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "author_name": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title",
+    "summary"
+  ]
+}
